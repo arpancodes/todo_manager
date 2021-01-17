@@ -2,7 +2,9 @@ class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    render plain: "Hello user!"
+    users_list = User.all.map { |user| user.display_user }.join("")
+    to_render = "<h2>List of users on our platform!</h2><ol>#{users_list}</ol>"
+    render html: to_render.html_safe
   end
 
   def create
