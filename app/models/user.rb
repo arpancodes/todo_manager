@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   def display_users_list
-    "<li>#{name} - #{email}</li>"
+    "<li><a href=\"/users/#{id}\">#{name} - #{email}</a></li>"
   end
 
   def display_user

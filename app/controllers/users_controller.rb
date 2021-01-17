@@ -22,7 +22,8 @@ class UsersController < ApplicationController
   def show
     id = params[:id]
     user = User.find(id)
-    render html: user.display_user.html_safe
+    to_render = "#{user.display_user}<p><a href=\"/users\">All Users</a></p>"
+    render html: to_render.html_safe
   end
 
   def login
