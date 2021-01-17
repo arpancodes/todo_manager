@@ -1,0 +1,100 @@
+/* Typography Scale
+48px
+34px
+24px
+20px
+18px
+*/
+
+:root {
+  --text-color: #453c52;
+  --semibold: 600;
+}
+
+body {
+  margin: 30px auto 0;
+  width: 600px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.TodoPage-title {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.TodoSection-title {
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text-color);
+
+  font-weight: 600;
+}
+
+.TodoSection-title--info {
+  font-size: 12px;
+  color: #453c52;
+  margin-left: 5px;
+}
+
+.TodoSection-todo {
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--text-color);
+  letter-spacing: 0.1px;
+}
+
+.TodoSection {
+  padding: 32px 0 0;
+}
+
+.AddTodo-form {
+  margin: 15px auto 0;
+}
+
+.AddTodo-input {
+  border-radius: 4px;
+  border: 1px solid #bfb8cc;
+  height: 32px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #726a7e;
+}
+
+.AddTodo-input--submit {
+  background-color: #48bb78;
+  width: 72px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.TodoSection-item {
+  margin-top: 5px;
+  width: fit-content;
+  margin-left: 10px;
+  padding: 4px;
+  border-radius: 5px;
+}
+.TodoSection-item:hover {
+  background-color: #f1edf7;
+}
+
+.TodoLabel {
+  font-size: 12px;
+  letter-spacing: 0.09px;
+  margin-left: 10px;
+  font-weight: normal;
+  color: #726a7e;
+}
+
+button.TodoLabel {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.TodoLabel-overdue {
+  color: #c53030;
+}

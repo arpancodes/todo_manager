@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="todo-app.css" />
+    <title>Our Todo Management App</title>
+  </head>
+  <body>
+    <h1 class="TodoPage-title">My To-do List</h1>
+    <form class="AddTodo-form" action="">
+      <input
+        name="todo_text"
+        class="AddTodo-input"
+        type="text"
+        placeholder="What's next?"
+      />
+      <input name="due_date" class="AddTodo-input" type="date" />
+      <input
+        class="AddTodo-input AddTodo-input--submit"
+        type="submit"
+        value="Add"
+      />
+    </form>
+    <article>
+      <section class="TodoSection">
+        <h2 class="TodoSection-title">
+          Due Today <span class="TodoSection-title--info">0/4</span>
+        </h2>
+        <div class="TodoSection-item">
+          <label class="TodoSection-todo"
+            ><input type="checkbox" />Type something</label
+          ><span class="TodoLabel TodoLabel-overdue">overdue</span>
+        </div>
+        <div class="TodoSection-item">
+          <label class="TodoSection-todo"
+            ><input type="checkbox" /> Type something</label
+          ><button class="TodoLabel"><i class="far fa-trash-alt"></i></button>
+        </div>
+      </section>
+      <section class="TodoSection">
+        <h2 class="TodoSection-title">
+          Due Tomorrow <span class="TodoSection-title--info">0/3</span>
+        </h2>
+        <div class="TodoSection-item">
+          <label class="TodoSection-todo"
+            ><input type="checkbox" />Type something</label
+          >
+        </div>
+      </section>
+      <section class="TodoSection">
+        <h2 class="TodoSection-title">
+          Remaining <span class="TodoSection-title--info">0/3</span>
+        </h2>
+        <div class="TodoSection-item">
+          <label class="TodoSection-todo"
+            ><input type="checkbox" />Type something</label
+          ><span class="TodoLabel">Jan 21</span>
+        </div>
+        <div class="TodoSection-item">
+          <label class="TodoSection-todo"
+            ><input type="checkbox" />Type something</label
+          ><span class="TodoLabel">Jan 22</span>
+        </div>
+        <div class="TodoSection-item">
+          <label class="TodoSection-todo"
+            ><input type="checkbox" />Type something</label
+          ><span class="TodoLabel">Jan 23</span>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
