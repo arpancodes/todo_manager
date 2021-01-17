@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     email = params[:email]
     password = params[:password]
     user = User.find_by(email: email, password: password)
-    to_render = user == nil ? "False" : "True"
-    render plain: to_render
+    to_render = not(user == nil)
+    render plain: to_render.to_s
   end
 end
