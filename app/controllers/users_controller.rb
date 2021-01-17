@@ -24,4 +24,12 @@ class UsersController < ApplicationController
     user = User.find(id)
     render html: user.display_user.html_safe
   end
+
+  def login
+    email = params[:email]
+    password = params[:password]
+    user = User.find_by(email: email, password: password)
+    to_render = user == nil ? "False" : "True"
+    render plain: to_render
+  end
 end
