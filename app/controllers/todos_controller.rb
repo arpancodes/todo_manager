@@ -22,7 +22,7 @@ class TodosController < ApplicationController
       completed: false,
     )
 
-    render plain: "Your todo was created with the id #{new_todo.id}"
+    render "index"
   end
 
   def update
