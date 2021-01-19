@@ -215,7 +215,7 @@ DEPENDENCIES
   rails (~> 6.1.1)
   sass-rails (>= 6)
   selenium-webdriver
-  spring
+  spring (>= 2.1.1)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
