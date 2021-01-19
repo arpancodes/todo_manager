@@ -1,0 +1,18 @@
+<section class="TodoSection">
+  <h2 class="TodoSection-title">
+    <%= label %> <span class="TodoSection-title--info"><%= todos.completed_todos.length %>/<%= todos.length %></span>
+  </h2>
+  <% todos.each do |todo| %>
+  <% if show_completed || !todo.completed %>
+  <div class="TodoSection-item">
+    <label class="TodoSection-todo <%= todo.completed ? "TodoSection-todo-completed" : nil %>">
+      <input <%= todo.completed ? "checked" : nil %> type="checkbox" />
+        <%= todo.todo_text %>
+    </label>
+    <% if show_due_date %>
+    <span class="TodoLabel"><%= todo.due_date.to_s(:short) %></span>
+    <%end%>
+  </div>
+  <%end%>
+<% end %>
+</section>

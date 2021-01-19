@@ -1,0 +1,35 @@
+<h1 class="TodoPage-title">My To-do List</h1>
+    <form class="AddTodo-form" action="">
+      <input
+        name="todo_text"
+        class="AddTodo-input"
+        type="text"
+        placeholder="What's next?"
+      />
+      <input name="due_date" class="AddTodo-input" type="date" />
+      <input
+        class="AddTodo-input AddTodo-input--submit"
+        type="submit"
+        value="Add"
+      />
+    </form>
+<article>
+  <%= render partial: "todo-list", locals: {
+    todos: Todo.overdue_todos,
+    label: "Overdue",
+    show_due_date: true,
+    show_completed: false
+  } %>
+  <%= render partial: "todo-list", locals: {
+    todos: Todo.due_today_todos,
+    label: "Due Today",
+    show_due_date: true,
+    show_completed: true
+  } %>
+  <%= render partial: "todo-list", locals: {
+    todos: Todo.due_later_todos,
+    label: "Due Later",
+    show_due_date: true,
+    show_completed: true
+  } %>
+</article>

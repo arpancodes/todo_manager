@@ -98,3 +98,6 @@ button.TodoLabel {
 .TodoLabel-overdue {
   color: #c53030;
 }
+.TodoSection-todo-completed {
+  text-decoration: line-through;
+}
