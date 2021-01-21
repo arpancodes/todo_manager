@@ -17,6 +17,9 @@
     <% if show_due_date %>
     <span class="TodoLabel"><%= todo.due_date.to_s(:short) %></span>
     <%end%>
+    <%= form_with url: "/todos/#{todo.id}", method: "DELETE" do %>
+      <input class="TodoAction-delete" type="image" src="trash.png" value="Delete">
+    <% end %>
   </div>
 <% end %>
 </section>

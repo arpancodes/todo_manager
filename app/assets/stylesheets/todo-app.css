@@ -84,6 +84,10 @@ body {
   background-color: #f1edf7;
 }
 
+.TodoSection-item:hover .TodoAction-delete {
+  opacity: 1;
+}
+
 .TodoLabel {
   font-size: 12px;
   letter-spacing: 0.09px;
@@ -103,4 +107,9 @@ button.TodoLabel {
 }
 .TodoSection-todo-completed {
   text-decoration: line-through;
+}
+.TodoAction-delete {
+  width: 15px;
+  margin: 5px 10px 0;
+  opacity: 0;
 }
