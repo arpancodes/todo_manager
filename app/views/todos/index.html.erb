@@ -23,7 +23,7 @@
   <%= render partial: "todo-list", locals: {
     todos: Todo.due_today_todos.order(:due_date),
     label: "Due Today",
-    show_due_date: true,
+    show_due_date: false,
     show_remaining: true
   } %>
   <%= render partial: "todo-list", locals: {
