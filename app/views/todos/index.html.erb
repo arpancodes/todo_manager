@@ -18,18 +18,18 @@
     todos: Todo.overdue_todos.order(:due_date),
     label: "Overdue",
     show_due_date: true,
-    show_completed: false
+    show_remaining: false
   } %>
   <%= render partial: "todo-list", locals: {
     todos: Todo.due_today_todos.order(:due_date),
     label: "Due Today",
     show_due_date: true,
-    show_completed: true
+    show_remaining: true
   } %>
   <%= render partial: "todo-list", locals: {
     todos: Todo.due_later_todos.order(:due_date),
     label: "Due Later",
     show_due_date: true,
-    show_completed: true
+    show_remaining: true
   } %>
 </article>
