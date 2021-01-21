@@ -15,6 +15,7 @@ body {
   margin: 30px auto 0;
   width: 600px;
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 }
 
 .TodoPage-title {
@@ -76,6 +77,8 @@ body {
   margin-left: 10px;
   padding: 4px;
   border-radius: 5px;
+  display: flex;
+  align-items: baseline;
 }
 .TodoSection-item:hover {
   background-color: #f1edf7;

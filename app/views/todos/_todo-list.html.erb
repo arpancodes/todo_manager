@@ -8,10 +8,12 @@
   </h2>
   <% todos.each do |todo| %>
   <div class="TodoSection-item">
-    <label class="TodoSection-todo <%= todo.completed ? "TodoSection-todo-completed" : nil %>">
-      <input <%= todo.completed ? "checked" : nil %> type="checkbox" />
-        <%= todo.todo_text %>
-    </label>
+    <%= form_with url: "/todos/#{todo.id}", method: "PUT" do %>
+      <label class="TodoSection-todo <%= todo.completed ? "TodoSection-todo-completed" : nil %>">
+        <input onclick="this.form.submit()" name="completed" <%= todo.completed ? "checked" : nil %> type="checkbox" />
+          <%= todo.todo_text %>
+      </label>
+    <% end %>
     <% if show_due_date %>
     <span class="TodoLabel"><%= todo.due_date.to_s(:short) %></span>
     <%end%>
