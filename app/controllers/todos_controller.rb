@@ -22,7 +22,7 @@ class TodosController < ApplicationController
       completed: false,
     )
 
-    render "index"
+    redirect_to todos_path
   end
 
   def update
