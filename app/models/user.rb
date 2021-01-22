@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :todos
+
   def display_users_list
     "<li><a href=\"/users/#{id}\">#{name} - #{email}</a></li>"
   end
