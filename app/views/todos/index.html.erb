@@ -1,5 +1,5 @@
 <h1 class="TodoPage-title">My To-do List</h1>
-<form class="AddTodo-form" method="POST" action="/todos">
+<% form_with url: "/todos", method: "POST", class:"AddTodo-form" do %>
   <input
     name="todo_text"
     class="AddTodo-input"
@@ -12,7 +12,7 @@
     type="submit"
     value="Add"
   />
-</form>
+<%end%>
 <article>
   <%= render partial: "todo-list", locals: {
     todos: Todo.overdue_todos.order(:due_date),
