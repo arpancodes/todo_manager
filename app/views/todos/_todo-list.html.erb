@@ -10,15 +10,15 @@
   <div class="TodoSection-item">
     <%= form_with url: "/todos/#{todo.id}", method: "PUT" do %>
       <label class="TodoSection-todo <%= todo.completed ? "TodoSection-todo-completed" : nil %>">
-        <input onclick="this.form.submit()" name="completed" <%= todo.completed ? "checked" : nil %> type="checkbox" />
-          <%= todo.todo_text %>
+        <%= check_box_tag 'completed', 'isCompleted', todo.completed, onclick: "this.form.submit()" %>
+        <%= todo.todo_text %>
       </label>
     <% end %>
     <% if show_due_date %>
     <span class="TodoLabel"><%= todo.due_date.to_s(:short) %></span>
     <%end%>
     <%= form_with url: "/todos/#{todo.id}", method: "DELETE" do %>
-      <input class="TodoAction-delete" type="image" src="trash.png" value="Delete">
+      <%= image_submit_tag "trash.png", class:"TodoAction-delete" %>
     <% end %>
   </div>
 <% end %>
