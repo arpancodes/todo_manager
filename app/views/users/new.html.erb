@@ -1,0 +1,16 @@
+<h1 class="TodoPage-title UserAuth-title">New here? Let's get you signed up!</h1>
+<%= form_with url: users_path, class: "UserAuth-form" do |form| %>
+  <div class="UserAuth-input-container">
+    <%= form.text_field :name, required: true, placeholder: "Your name", class: "UserAuth-input" %>
+    <p class="UserAuth-label">Your Name</p>
+  </div>
+  <div class="UserAuth-input-container">
+    <%= form.email_field :email, required: true, placeholder: "Your email", class: "UserAuth-input" %>
+    <p class="UserAuth-label">Your email</p>
+  </div>
+  <div class="UserAuth-input-container">
+    <%= form.password_field :password, required: true, placeholder: "A strong password", class: "UserAuth-input" %>
+    <p class="UserAuth-label">A strong password</p>
+  </div>
+  <%= form.submit "Signup", class: "UserAuth-submit" %>
+<%end%>

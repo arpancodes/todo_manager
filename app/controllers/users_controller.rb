@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
+
+  def new
+    render "new"
+  end
 
   def index
     users_list = User.all.map { |user| user.display_users_list }.join("")
@@ -16,7 +19,7 @@ class UsersController < ApplicationController
       email: email,
       password: password,
     )
-    render html: "<h1>Hey #{user.name}, Welcome to Todo management!</h1>".html_safe
+    redirect_to "/"
   end
 
   def show

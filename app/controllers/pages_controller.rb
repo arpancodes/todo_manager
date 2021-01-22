@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def main
-    render plain: "Welcome to rails app!"
+    render "index"
   end
 end
