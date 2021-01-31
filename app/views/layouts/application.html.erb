@@ -17,6 +17,11 @@
         <span class="userHeader-signout"><%= link_to "Sign out", destroy_session_path, method: "delete" %></span>
       </h3>
     <%end%>
+    <% if flash[:error] %>
+      <p class="flash-error">
+        <%= flash[:error] %>
+      </p>
+    <%end%>
     <%= yield %>
   </body>
 </html>

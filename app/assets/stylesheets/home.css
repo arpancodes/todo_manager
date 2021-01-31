@@ -31,3 +31,11 @@
 .userHeader-signout a:hover {
   color: rgb(36, 36, 36);
 }
+
+.flash-error {
+  background: rgb(224, 76, 76);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0 0 10px;
+}
