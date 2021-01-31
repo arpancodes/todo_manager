@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <% if @current_user %>
+      <h3 class="userHeader">Welcome, <%= @current_user.name %></h3>
+    <%end%>
     <%= yield %>
   </body>
 </html>

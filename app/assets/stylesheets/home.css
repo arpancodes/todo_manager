@@ -14,3 +14,10 @@
   background-color: rgba(0, 0, 0, 0.144);
   text-decoration: underline;
 }
+
+.userHeader {
+  background-color: rgb(192, 238, 192);
+  padding: 10px;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
