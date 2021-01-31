@@ -12,7 +12,10 @@
 
   <body>
     <% if @current_user %>
-      <h3 class="userHeader">Welcome, <%= @current_user.name %></h3>
+      <h3 class="userHeader">
+        Welcome, <%= @current_user.name %>!
+        <span class="userHeader-signout"><%= link_to "Sign out", destroy_session_path, method: "delete" %></span>
+      </h3>
     <%end%>
     <%= yield %>
   </body>

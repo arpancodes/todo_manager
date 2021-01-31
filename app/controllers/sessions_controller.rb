@@ -8,9 +8,15 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:current_user_id] = user.id
-      render plain: "logged in!"
+      redirect_to "/"
     else
       render plain: "wrong password"
     end
+  end
+
+  def destroy
+    session[:current_user_id] = nil
+    @current_user = nil
+    redirect_to "/"
   end
 end

@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :todos
   post "/users/login", to: "users#login"
   resources :users
-  root to: 'pages#main'
+  root to: "pages#main"
   get "/signin" => "sessions#new", as: :new_sessions
   post "/signin" => "sessions#create", as: :sessions
- end
+  delete "/signout" => "sessions#destroy", as: :destroy_session
+end
