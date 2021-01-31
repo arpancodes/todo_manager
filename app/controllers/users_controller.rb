@@ -15,12 +15,18 @@ class UsersController < ApplicationController
     name = params[:name]
     email = params[:email]
     password = params[:password]
-    user = User.create!(
+    user = User.new(
       name: name,
       email: email,
       password: password,
     )
-    redirect_to "/"
+    if user.save
+      session[:current_user_id] = user.id
+      redirect_to todos_path
+    else
+      flash[:error] = user.errors.full_messages.join(", ")
+      redirect_to new_user_path
+    end
   end
 
   def show
