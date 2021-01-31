@@ -1,0 +1,16 @@
+.Home-navigation {
+  color: rgb(32, 32, 32);
+}
+
+.Home-navigation a {
+  color: black;
+  display: inline-block;
+  padding: 5px 10px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.Home-navigation a:hover {
+  background-color: rgba(0, 0, 0, 0.144);
+  text-decoration: underline;
+}

@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   post "/users/login", to: "users#login"
   resources :users
   root to: 'pages#main'
-end
+  get "/signin" => "sessions#new", as: :new_sessions
+  post "/signin" => "sessions#create", as: :sessions
+ end
